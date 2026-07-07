@@ -2984,7 +2984,7 @@ TERRENI_MAPPA = {
 
 
 def render_map_illustration(mondo, luoghi, stile_card):
-    terreno = TERRENI_MAPPA.get(mondo, "")
+    terreno = textwrap.dedent(TERRENI_MAPPA.get(mondo, "")).strip()
     marcatori = "".join(
         f'<g>'
         f'<circle cx="{l["x"]}" cy="{l["y"]}" r="15" fill="currentColor" opacity="0.16"/>'
